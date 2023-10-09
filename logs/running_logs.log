@@ -1,0 +1,1085 @@
+[2023-10-02 16:32:09,381: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-10-02 16:32:09,398: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-10-02 16:32:09,404: INFO: common: created directory at: artifacts]
+[2023-10-02 16:32:09,411: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-10-02 16:32:21,232: INFO: 1170291011: artifacts/data_ingestion/data.zip download! with following info: 
+Connection: close
+Content-Length: 11616915
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "adf745abc03891fe493c3be264ec012691fe3fa21d861f35a27edbe6d86a76b1"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: 95DC:3ED173:E5854:1AE41B:651AA337
+Accept-Ranges: bytes
+Date: Mon, 02 Oct 2023 11:02:16 GMT
+Via: 1.1 varnish
+X-Served-By: cache-del21745-DEL
+X-Cache: MISS
+X-Cache-Hits: 0
+X-Timer: S1696244536.977857,VS0,VE1008
+Vary: Authorization,Accept-Encoding,Origin
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: 7b18830d75f58091ec040faea2b640532859089c
+Expires: Mon, 02 Oct 2023 11:07:16 GMT
+Source-Age: 1
+
+]
+[2023-10-02 16:47:20,456: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2023-10-02 16:47:20,477: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-10-02 16:47:20,485: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-10-02 16:47:20,487: INFO: common: created directory at: artifacts]
+[2023-10-02 16:47:20,489: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-10-02 16:47:27,561: INFO: data_ingestion: artifacts/data_ingestion/data.zip download! with following info: 
+Connection: close
+Content-Length: 11616915
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "adf745abc03891fe493c3be264ec012691fe3fa21d861f35a27edbe6d86a76b1"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: 95DC:3ED173:E5854:1AE41B:651AA337
+Accept-Ranges: bytes
+Date: Mon, 02 Oct 2023 11:17:25 GMT
+Via: 1.1 varnish
+X-Served-By: cache-del21723-DEL
+X-Cache: HIT
+X-Cache-Hits: 0
+X-Timer: S1696245446.644536,VS0,VE293
+Vary: Authorization,Accept-Encoding,Origin
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: 48e2a89c565dab1ac22c003314366322fe313a20
+Expires: Mon, 02 Oct 2023 11:22:25 GMT
+Source-Age: 0
+
+]
+[2023-10-02 16:47:58,758: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2023-10-02 16:47:58,807: INFO: main: *******************]
+[2023-10-02 16:47:58,827: INFO: main: >>>>>> stage Prepare base model started <<<<<<]
+[2023-10-02 16:47:58,924: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-10-02 16:47:58,961: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-10-02 16:47:59,025: INFO: common: created directory at: artifacts]
+[2023-10-02 16:47:59,041: INFO: common: created directory at: artifacts/prepare_base_model]
+[2023-10-02 16:48:31,193: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2023-10-02 16:48:33,534: INFO: main: >>>>>> stage Prepare base model completed <<<<<<
+
+x==========x]
+[2023-10-02 16:48:33,570: INFO: main: *******************]
+[2023-10-02 16:48:33,632: INFO: main: >>>>>> stage Training started <<<<<<]
+[2023-10-02 16:48:33,789: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-10-02 16:48:33,843: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-10-02 16:48:33,871: INFO: common: created directory at: artifacts]
+[2023-10-02 16:48:33,904: INFO: common: created directory at: artifacts\prepare_callbacks\checkpoint_dir]
+[2023-10-02 16:48:33,906: INFO: common: created directory at: artifacts\prepare_callbacks\tensorboard_log_dir]
+[2023-10-02 16:48:33,917: ERROR: main: 'WindowsPath' object has no attribute 'endswith']
+Traceback (most recent call last):
+  File "main.py", line 40, in <module>
+    model_trainer.main()
+  File "c:\users\vision\onedrive\desktop\cnn_project\chicken-disease-classification-projects\src\cnnClassifier\pipeline\stage_03_training.py", line 19, in main
+    callback_list = prepare_callbacks.get_tb_ckpt_callbacks()
+  File "c:\users\vision\onedrive\desktop\cnn_project\chicken-disease-classification-projects\src\cnnClassifier\components\prepare_callbacks.py", line 36, in get_tb_ckpt_callbacks
+    self._create_ckpt_callbacks
+  File "c:\users\vision\onedrive\desktop\cnn_project\chicken-disease-classification-projects\src\cnnClassifier\components\prepare_callbacks.py", line 27, in _create_ckpt_callbacks
+    return tf.keras.callbacks.ModelCheckpoint(
+  File "C:\Users\Public\miniconda3\envs\chicken\lib\site-packages\keras\src\callbacks.py", line 1369, in __init__
+    if filepath and filepath.endswith(".keras") and options is not None:
+AttributeError: 'WindowsPath' object has no attribute 'endswith'
+[2023-10-02 17:00:51,956: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-10-02 17:00:51,970: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-10-02 17:00:51,975: INFO: common: created directory at: artifacts]
+[2023-10-02 17:00:51,981: INFO: common: created directory at: artifacts/prepare_base_model]
+[2023-10-02 17:00:54,601: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2023-10-02 17:17:27,597: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-10-02 17:17:27,609: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-10-02 17:17:27,615: INFO: common: created directory at: artifacts]
+[2023-10-02 17:17:27,620: INFO: common: created directory at: artifacts\prepare_callbacks\checkpoint_dir]
+[2023-10-02 17:17:27,625: INFO: common: created directory at: artifacts\prepare_callbacks\tensorboard_log_dir]
+[2023-10-02 17:18:25,601: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-10-02 17:18:25,613: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-10-02 17:18:25,619: INFO: common: created directory at: artifacts]
+[2023-10-02 17:18:25,626: INFO: common: created directory at: artifacts\prepare_callbacks\checkpoint_dir]
+[2023-10-02 17:18:25,633: INFO: common: created directory at: artifacts\prepare_callbacks\tensorboard_log_dir]
+[2023-10-02 17:24:08,158: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-10-02 17:24:08,167: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-10-02 17:24:08,173: INFO: common: created directory at: artifacts]
+[2023-10-02 17:24:08,177: INFO: common: created directory at: artifacts\prepare_callbacks\checkpoint_dir]
+[2023-10-02 17:24:08,181: INFO: common: created directory at: artifacts\prepare_callbacks\tensorboard_log_dir]
+[2023-10-02 17:37:29,136: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-10-02 17:37:29,147: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-10-02 17:37:29,153: INFO: common: created directory at: artifacts]
+[2023-10-02 17:37:29,166: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-10-02 17:37:37,122: INFO: 1170291011: artifacts/data_ingestion/data.zip download! with following info: 
+Connection: close
+Content-Length: 11616915
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "adf745abc03891fe493c3be264ec012691fe3fa21d861f35a27edbe6d86a76b1"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: 95DC:3ED173:E5854:1AE41B:651AA337
+Accept-Ranges: bytes
+Date: Mon, 02 Oct 2023 12:07:35 GMT
+Via: 1.1 varnish
+X-Served-By: cache-del21744-DEL
+X-Cache: HIT
+X-Cache-Hits: 0
+X-Timer: S1696248455.798377,VS0,VE302
+Vary: Authorization,Accept-Encoding,Origin
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: 2a8b068822a56873781d50e6f3a5a31abb5577d8
+Expires: Mon, 02 Oct 2023 12:12:35 GMT
+Source-Age: 0
+
+]
+[2023-10-02 17:39:35,386: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-10-02 17:39:35,398: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-10-02 17:39:35,403: INFO: common: created directory at: artifacts]
+[2023-10-02 17:39:35,409: INFO: common: created directory at: artifacts/prepare_base_model]
+[2023-10-02 17:39:40,778: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2023-10-02 17:41:34,567: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-10-02 17:41:34,581: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-10-02 17:41:34,587: INFO: common: created directory at: artifacts]
+[2023-10-02 17:41:34,597: INFO: common: created directory at: artifacts\prepare_callbacks\checkpoint_dir]
+[2023-10-02 17:41:34,602: INFO: common: created directory at: artifacts\prepare_callbacks\tensorboard_log_dir]
+[2023-10-02 17:47:36,637: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-10-02 17:47:36,647: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-10-02 17:47:36,651: INFO: common: created directory at: artifacts]
+[2023-10-02 17:47:36,657: INFO: common: created directory at: artifacts\prepare_callbacks\checkpoint_dir]
+[2023-10-02 17:47:36,660: INFO: common: created directory at: artifacts\prepare_callbacks\tensorboard_log_dir]
+[2023-10-02 18:58:14,332: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-10-02 18:58:14,349: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-10-02 18:58:14,356: INFO: common: created directory at: artifacts]
+[2023-10-02 18:58:14,367: INFO: common: created directory at: artifacts\prepare_callbacks\checkpoint_dir]
+[2023-10-02 18:58:14,374: INFO: common: created directory at: artifacts\prepare_callbacks\tensorboard_log_dir]
+[2023-10-05 14:25:14,445: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-10-05 14:25:14,476: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-10-05 14:25:14,485: INFO: common: created directory at: artifacts]
+[2023-10-05 14:25:14,494: INFO: common: created directory at: artifacts/prepare_base_model]
+[2023-10-05 14:25:16,736: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2023-10-06 13:29:04,658: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-10-06 13:29:05,998: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-10-06 13:29:06,003: INFO: common: created directory at: artifacts]
+[2023-10-06 13:29:06,007: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-10-06 13:29:06,011: INFO: 1170291011: File already exists of size: ~ 11345 KB]
+[2023-10-06 13:30:55,646: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-10-06 13:30:55,663: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-10-06 13:30:55,670: INFO: common: created directory at: artifacts]
+[2023-10-06 13:30:55,677: INFO: common: created directory at: artifacts/prepare_base_model]
+[2023-10-06 13:30:58,770: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2023-10-06 13:34:14,510: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-10-06 13:34:14,526: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-10-06 13:34:14,533: INFO: common: created directory at: artifacts]
+[2023-10-06 13:34:14,540: INFO: common: created directory at: artifacts\prepare_callbacks\checkpoint_dir]
+[2023-10-06 13:34:14,551: INFO: common: created directory at: artifacts\prepare_callbacks\tensorboard_log_dir]
+[2023-10-06 14:39:25,952: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-10-06 14:39:25,963: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-10-06 14:39:25,971: INFO: common: created directory at: artifacts]
+[2023-10-06 14:39:25,985: INFO: common: created directory at: artifacts\prepare_callbacks\checkpoint_dir]
+[2023-10-06 14:39:25,992: INFO: common: created directory at: artifacts\prepare_callbacks\tensorboard_log_dir]
+[2023-10-06 14:46:47,754: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-10-06 14:46:47,766: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-10-06 14:46:47,771: INFO: common: created directory at: artifacts]
+[2023-10-06 14:46:47,776: INFO: common: created directory at: artifacts\training]
+[2023-10-06 14:47:23,141: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-10-06 14:47:23,151: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-10-06 14:47:23,156: INFO: common: created directory at: artifacts]
+[2023-10-06 14:47:23,161: INFO: common: created directory at: artifacts\training]
+[2023-10-06 15:32:21,522: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-10-06 15:32:21,532: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-10-06 15:32:21,541: INFO: common: created directory at: artifacts]
+[2023-10-06 15:32:21,545: INFO: common: created directory at: artifacts\training]
+[2023-10-06 15:35:57,205: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-10-06 15:35:57,215: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-10-06 15:35:57,219: INFO: common: created directory at: artifacts]
+[2023-10-06 15:35:57,224: INFO: common: created directory at: artifacts\training]
+[2023-10-06 16:09:40,368: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-10-06 16:09:40,379: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-10-06 16:09:40,384: INFO: common: created directory at: artifacts]
+[2023-10-06 16:11:39,015: INFO: common: json file saved at: scores.json]
+[2023-10-07 17:43:38,298: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2023-10-07 17:43:38,305: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-10-07 17:43:38,313: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-10-07 17:43:38,315: INFO: common: created directory at: artifacts]
+[2023-10-07 17:43:38,319: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-10-07 17:44:07,472: ERROR: main: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond]
+Traceback (most recent call last):
+  File "main.py", line 12, in <module>
+    data_ingestion.main()
+  File "c:\users\vision\onedrive\desktop\all_project\cnn_project\chicken-disease-classification-projects\src\cnnClassifier\pipeline\stage_01_data_ingestion.py", line 16, in main
+    data_ingestion.download_file()
+  File "c:\users\vision\onedrive\desktop\all_project\cnn_project\chicken-disease-classification-projects\src\cnnClassifier\components\data_ingestion.py", line 18, in download_file
+    filename, headers = request.urlretrieve(
+  File "C:\Users\Public\miniconda3\envs\cnn\lib\urllib\request.py", line 247, in urlretrieve
+    with contextlib.closing(urlopen(url, data)) as fp:
+  File "C:\Users\Public\miniconda3\envs\cnn\lib\urllib\request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "C:\Users\Public\miniconda3\envs\cnn\lib\urllib\request.py", line 531, in open
+    response = meth(req, response)
+  File "C:\Users\Public\miniconda3\envs\cnn\lib\urllib\request.py", line 640, in http_response
+    response = self.parent.error(
+  File "C:\Users\Public\miniconda3\envs\cnn\lib\urllib\request.py", line 563, in error
+    result = self._call_chain(*args)
+  File "C:\Users\Public\miniconda3\envs\cnn\lib\urllib\request.py", line 502, in _call_chain
+    result = func(*args)
+  File "C:\Users\Public\miniconda3\envs\cnn\lib\urllib\request.py", line 755, in http_error_302
+    return self.parent.open(new, timeout=req.timeout)
+  File "C:\Users\Public\miniconda3\envs\cnn\lib\urllib\request.py", line 525, in open
+    response = self._open(req, data)
+  File "C:\Users\Public\miniconda3\envs\cnn\lib\urllib\request.py", line 542, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+  File "C:\Users\Public\miniconda3\envs\cnn\lib\urllib\request.py", line 502, in _call_chain
+    result = func(*args)
+  File "C:\Users\Public\miniconda3\envs\cnn\lib\urllib\request.py", line 1397, in https_open
+    return self.do_open(http.client.HTTPSConnection, req,
+  File "C:\Users\Public\miniconda3\envs\cnn\lib\urllib\request.py", line 1358, in do_open
+    r = h.getresponse()
+  File "C:\Users\Public\miniconda3\envs\cnn\lib\http\client.py", line 1348, in getresponse
+    response.begin()
+  File "C:\Users\Public\miniconda3\envs\cnn\lib\http\client.py", line 316, in begin
+    version, status, reason = self._read_status()
+  File "C:\Users\Public\miniconda3\envs\cnn\lib\http\client.py", line 277, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "C:\Users\Public\miniconda3\envs\cnn\lib\socket.py", line 669, in readinto
+    return self._sock.recv_into(b)
+  File "C:\Users\Public\miniconda3\envs\cnn\lib\ssl.py", line 1274, in recv_into
+    return self.read(nbytes, buffer)
+  File "C:\Users\Public\miniconda3\envs\cnn\lib\ssl.py", line 1132, in read
+    return self._sslobj.read(len, buffer)
+TimeoutError: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+[2023-10-07 17:44:47,934: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2023-10-07 17:44:48,018: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-10-07 17:44:48,065: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-10-07 17:44:48,111: INFO: common: created directory at: artifacts]
+[2023-10-07 17:44:48,141: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-10-07 17:44:52,159: ERROR: main: <urlopen error [WinError 10054] An existing connection was forcibly closed by the remote host>]
+Traceback (most recent call last):
+  File "C:\Users\Public\miniconda3\envs\cnn\lib\urllib\request.py", line 1354, in do_open
+    h.request(req.get_method(), req.selector, req.data, headers,
+  File "C:\Users\Public\miniconda3\envs\cnn\lib\http\client.py", line 1256, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "C:\Users\Public\miniconda3\envs\cnn\lib\http\client.py", line 1302, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "C:\Users\Public\miniconda3\envs\cnn\lib\http\client.py", line 1251, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Users\Public\miniconda3\envs\cnn\lib\http\client.py", line 1011, in _send_output
+    self.send(msg)
+  File "C:\Users\Public\miniconda3\envs\cnn\lib\http\client.py", line 951, in send
+    self.connect()
+  File "C:\Users\Public\miniconda3\envs\cnn\lib\http\client.py", line 1425, in connect
+    self.sock = self._context.wrap_socket(self.sock,
+  File "C:\Users\Public\miniconda3\envs\cnn\lib\ssl.py", line 500, in wrap_socket
+    return self.sslsocket_class._create(
+  File "C:\Users\Public\miniconda3\envs\cnn\lib\ssl.py", line 1073, in _create
+    self.do_handshake()
+  File "C:\Users\Public\miniconda3\envs\cnn\lib\ssl.py", line 1342, in do_handshake
+    self._sslobj.do_handshake()
+ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "main.py", line 12, in <module>
+    data_ingestion.main()
+  File "c:\users\vision\onedrive\desktop\all_project\cnn_project\chicken-disease-classification-projects\src\cnnClassifier\pipeline\stage_01_data_ingestion.py", line 16, in main
+    data_ingestion.download_file()
+  File "c:\users\vision\onedrive\desktop\all_project\cnn_project\chicken-disease-classification-projects\src\cnnClassifier\components\data_ingestion.py", line 18, in download_file
+    filename, headers = request.urlretrieve(
+  File "C:\Users\Public\miniconda3\envs\cnn\lib\urllib\request.py", line 247, in urlretrieve
+    with contextlib.closing(urlopen(url, data)) as fp:
+  File "C:\Users\Public\miniconda3\envs\cnn\lib\urllib\request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "C:\Users\Public\miniconda3\envs\cnn\lib\urllib\request.py", line 531, in open
+    response = meth(req, response)
+  File "C:\Users\Public\miniconda3\envs\cnn\lib\urllib\request.py", line 640, in http_response
+    response = self.parent.error(
+  File "C:\Users\Public\miniconda3\envs\cnn\lib\urllib\request.py", line 563, in error
+    result = self._call_chain(*args)
+  File "C:\Users\Public\miniconda3\envs\cnn\lib\urllib\request.py", line 502, in _call_chain
+    result = func(*args)
+  File "C:\Users\Public\miniconda3\envs\cnn\lib\urllib\request.py", line 755, in http_error_302
+    return self.parent.open(new, timeout=req.timeout)
+  File "C:\Users\Public\miniconda3\envs\cnn\lib\urllib\request.py", line 525, in open
+    response = self._open(req, data)
+  File "C:\Users\Public\miniconda3\envs\cnn\lib\urllib\request.py", line 542, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+  File "C:\Users\Public\miniconda3\envs\cnn\lib\urllib\request.py", line 502, in _call_chain
+    result = func(*args)
+  File "C:\Users\Public\miniconda3\envs\cnn\lib\urllib\request.py", line 1397, in https_open
+    return self.do_open(http.client.HTTPSConnection, req,
+  File "C:\Users\Public\miniconda3\envs\cnn\lib\urllib\request.py", line 1357, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [WinError 10054] An existing connection was forcibly closed by the remote host>
+[2023-10-07 17:45:34,106: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2023-10-07 17:45:34,114: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-10-07 17:45:34,120: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-10-07 17:45:34,122: INFO: common: created directory at: artifacts]
+[2023-10-07 17:45:34,126: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-10-07 17:49:13,183: ERROR: main: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond]
+Traceback (most recent call last):
+  File "main.py", line 12, in <module>
+    data_ingestion.main()
+  File "c:\users\vision\onedrive\desktop\all_project\cnn_project\chicken-disease-classification-projects\src\cnnClassifier\pipeline\stage_01_data_ingestion.py", line 16, in main
+    data_ingestion.download_file()
+  File "c:\users\vision\onedrive\desktop\all_project\cnn_project\chicken-disease-classification-projects\src\cnnClassifier\components\data_ingestion.py", line 18, in download_file
+    filename, headers = request.urlretrieve(
+  File "C:\Users\Public\miniconda3\envs\cnn\lib\urllib\request.py", line 247, in urlretrieve
+    with contextlib.closing(urlopen(url, data)) as fp:
+  File "C:\Users\Public\miniconda3\envs\cnn\lib\urllib\request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "C:\Users\Public\miniconda3\envs\cnn\lib\urllib\request.py", line 531, in open
+    response = meth(req, response)
+  File "C:\Users\Public\miniconda3\envs\cnn\lib\urllib\request.py", line 640, in http_response
+    response = self.parent.error(
+  File "C:\Users\Public\miniconda3\envs\cnn\lib\urllib\request.py", line 563, in error
+    result = self._call_chain(*args)
+  File "C:\Users\Public\miniconda3\envs\cnn\lib\urllib\request.py", line 502, in _call_chain
+    result = func(*args)
+  File "C:\Users\Public\miniconda3\envs\cnn\lib\urllib\request.py", line 755, in http_error_302
+    return self.parent.open(new, timeout=req.timeout)
+  File "C:\Users\Public\miniconda3\envs\cnn\lib\urllib\request.py", line 525, in open
+    response = self._open(req, data)
+  File "C:\Users\Public\miniconda3\envs\cnn\lib\urllib\request.py", line 542, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+  File "C:\Users\Public\miniconda3\envs\cnn\lib\urllib\request.py", line 502, in _call_chain
+    result = func(*args)
+  File "C:\Users\Public\miniconda3\envs\cnn\lib\urllib\request.py", line 1397, in https_open
+    return self.do_open(http.client.HTTPSConnection, req,
+  File "C:\Users\Public\miniconda3\envs\cnn\lib\urllib\request.py", line 1358, in do_open
+    r = h.getresponse()
+  File "C:\Users\Public\miniconda3\envs\cnn\lib\http\client.py", line 1348, in getresponse
+    response.begin()
+  File "C:\Users\Public\miniconda3\envs\cnn\lib\http\client.py", line 316, in begin
+    version, status, reason = self._read_status()
+  File "C:\Users\Public\miniconda3\envs\cnn\lib\http\client.py", line 277, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "C:\Users\Public\miniconda3\envs\cnn\lib\socket.py", line 669, in readinto
+    return self._sock.recv_into(b)
+  File "C:\Users\Public\miniconda3\envs\cnn\lib\ssl.py", line 1274, in recv_into
+    return self.read(nbytes, buffer)
+  File "C:\Users\Public\miniconda3\envs\cnn\lib\ssl.py", line 1132, in read
+    return self._sslobj.read(len, buffer)
+TimeoutError: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+[2023-10-07 17:51:16,984: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2023-10-07 17:51:16,991: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-10-07 17:51:16,996: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-10-07 17:51:16,998: INFO: common: created directory at: artifacts]
+[2023-10-07 17:51:17,000: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-10-07 17:51:19,330: ERROR: main: <urlopen error [WinError 10054] An existing connection was forcibly closed by the remote host>]
+Traceback (most recent call last):
+  File "C:\Users\Public\miniconda3\envs\cnn\lib\urllib\request.py", line 1354, in do_open
+    h.request(req.get_method(), req.selector, req.data, headers,
+  File "C:\Users\Public\miniconda3\envs\cnn\lib\http\client.py", line 1256, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "C:\Users\Public\miniconda3\envs\cnn\lib\http\client.py", line 1302, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "C:\Users\Public\miniconda3\envs\cnn\lib\http\client.py", line 1251, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Users\Public\miniconda3\envs\cnn\lib\http\client.py", line 1011, in _send_output
+    self.send(msg)
+  File "C:\Users\Public\miniconda3\envs\cnn\lib\http\client.py", line 951, in send
+    self.connect()
+  File "C:\Users\Public\miniconda3\envs\cnn\lib\http\client.py", line 1425, in connect
+    self.sock = self._context.wrap_socket(self.sock,
+  File "C:\Users\Public\miniconda3\envs\cnn\lib\ssl.py", line 500, in wrap_socket
+    return self.sslsocket_class._create(
+  File "C:\Users\Public\miniconda3\envs\cnn\lib\ssl.py", line 1073, in _create
+    self.do_handshake()
+  File "C:\Users\Public\miniconda3\envs\cnn\lib\ssl.py", line 1342, in do_handshake
+    self._sslobj.do_handshake()
+ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "main.py", line 12, in <module>
+    data_ingestion.main()
+  File "c:\users\vision\onedrive\desktop\all_project\cnn_project\chicken-disease-classification-projects\src\cnnClassifier\pipeline\stage_01_data_ingestion.py", line 16, in main
+    data_ingestion.download_file()
+  File "c:\users\vision\onedrive\desktop\all_project\cnn_project\chicken-disease-classification-projects\src\cnnClassifier\components\data_ingestion.py", line 18, in download_file
+    filename, headers = request.urlretrieve(
+  File "C:\Users\Public\miniconda3\envs\cnn\lib\urllib\request.py", line 247, in urlretrieve
+    with contextlib.closing(urlopen(url, data)) as fp:
+  File "C:\Users\Public\miniconda3\envs\cnn\lib\urllib\request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "C:\Users\Public\miniconda3\envs\cnn\lib\urllib\request.py", line 531, in open
+    response = meth(req, response)
+  File "C:\Users\Public\miniconda3\envs\cnn\lib\urllib\request.py", line 640, in http_response
+    response = self.parent.error(
+  File "C:\Users\Public\miniconda3\envs\cnn\lib\urllib\request.py", line 563, in error
+    result = self._call_chain(*args)
+  File "C:\Users\Public\miniconda3\envs\cnn\lib\urllib\request.py", line 502, in _call_chain
+    result = func(*args)
+  File "C:\Users\Public\miniconda3\envs\cnn\lib\urllib\request.py", line 755, in http_error_302
+    return self.parent.open(new, timeout=req.timeout)
+  File "C:\Users\Public\miniconda3\envs\cnn\lib\urllib\request.py", line 525, in open
+    response = self._open(req, data)
+  File "C:\Users\Public\miniconda3\envs\cnn\lib\urllib\request.py", line 542, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+  File "C:\Users\Public\miniconda3\envs\cnn\lib\urllib\request.py", line 502, in _call_chain
+    result = func(*args)
+  File "C:\Users\Public\miniconda3\envs\cnn\lib\urllib\request.py", line 1397, in https_open
+    return self.do_open(http.client.HTTPSConnection, req,
+  File "C:\Users\Public\miniconda3\envs\cnn\lib\urllib\request.py", line 1357, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [WinError 10054] An existing connection was forcibly closed by the remote host>
+[2023-10-07 20:51:51,579: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2023-10-07 20:51:51,586: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-10-07 20:51:51,594: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-10-07 20:51:51,600: INFO: common: created directory at: artifacts]
+[2023-10-07 20:51:51,622: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-10-07 20:51:53,199: INFO: data_ingestion: artifacts/data_ingestion/data.zip download! with following info: 
+Server: GitHub.com
+Date: Sat, 07 Oct 2023 15:21:53 GMT
+Content-Type: text/html; charset=utf-8
+Vary: X-PJAX, X-PJAX-Container, Turbo-Visit, Turbo-Frame, Accept-Encoding, Accept, X-Requested-With
+ETag: W/"8107e0bcb3f447f7e81e4879a5fafa04"
+Cache-Control: max-age=0, private, must-revalidate
+Strict-Transport-Security: max-age=31536000; includeSubdomains; preload
+X-Frame-Options: deny
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Referrer-Policy: no-referrer-when-downgrade
+Content-Security-Policy: default-src 'none'; base-uri 'self'; child-src github.com/assets-cdn/worker/ gist.github.com/assets-cdn/worker/; connect-src 'self' uploads.github.com www.githubstatus.com collector.github.com raw.githubusercontent.com api.githubcopilot.com api.github.com github-cloud.s3.amazonaws.com github-production-repository-file-5c1aeb.s3.amazonaws.com github-production-upload-manifest-file-7fdce7.s3.amazonaws.com github-production-user-asset-6210df.s3.amazonaws.com cdn.optimizely.com logx.optimizely.com/v1/events objects-origin.githubusercontent.com *.actions.githubusercontent.com productionresultssa0.blob.core.windows.net/ productionresultssa1.blob.core.windows.net/ productionresultssa2.blob.core.windows.net/ productionresultssa3.blob.core.windows.net/ productionresultssa4.blob.core.windows.net/ productionresultssa5.blob.core.windows.net/ productionresultssa6.blob.core.windows.net/ productionresultssa7.blob.core.windows.net/ productionresultssa8.blob.core.windows.net/ productionresultssa9.blob.core.windows.net/ wss://*.actions.githubusercontent.com github-production-repository-image-32fea6.s3.amazonaws.com github-production-release-asset-2e65be.s3.amazonaws.com insights.github.com wss://alive.github.com; font-src github.githubassets.com; form-action 'self' github.com gist.github.com objects-origin.githubusercontent.com; frame-ancestors 'none'; frame-src viewscreen.githubusercontent.com notebooks.githubusercontent.com support.github.com; img-src 'self' data: github.githubassets.com media.githubusercontent.com camo.githubusercontent.com identicons.github.com avatars.githubusercontent.com github-cloud.s3.amazonaws.com objects.githubusercontent.com secured-user-images.githubusercontent.com/ user-images.githubusercontent.com/ private-user-images.githubusercontent.com opengraph.githubassets.com github-production-user-asset-6210df.s3.amazonaws.com customer-stories-feed.github.com spotlights-feed.github.com objects-origin.githubusercontent.com *.githubusercontent.com; manifest-src 'self'; media-src github.com user-images.githubusercontent.com/ secured-user-images.githubusercontent.com/ private-user-images.githubusercontent.com github-production-user-asset-6210df.s3.amazonaws.com; script-src github.githubassets.com; style-src 'unsafe-inline' github.githubassets.com; upgrade-insecure-requests; worker-src github.com/assets-cdn/worker/ gist.github.com/assets-cdn/worker/
+Set-Cookie: _gh_sess=oeO7I9ICWubHyivZfEBRa09IRWBus1M81yWDeLrxiiYN0%2BL3q%2FANa8jKnpW%2FLXrKdOPM66KYaVmwDpu3eE%2FXps2HlJUT93QjG18kenNdnf1oxn3w71zHU%2FbgcVnjmGWsS9qcUgxHSBIKydwAe8Fk%2BD3Jc4q9FKcHdZIhq6TsvhwfSHh9quiMlJmdxVaNjvHnIRm2Oy2D0ST2bBLR0jzi%2BqfsEEShqFYeX0wDICjB9vU868f2L6ecKVz%2FLLXcKkwqdlHFZIn7yBKueRbw7Gbj2w%3D%3D--nBhMjz2w70Df9P%2B%2B--N2yH0248%2FBQeym%2FQsIF7OA%3D%3D; Path=/; HttpOnly; Secure; SameSite=Lax
+Set-Cookie: _octo=GH1.1.1961193020.1696692113; Path=/; Domain=github.com; Expires=Mon, 07 Oct 2024 15:21:53 GMT; Secure; SameSite=Lax
+Set-Cookie: logged_in=no; Path=/; Domain=github.com; Expires=Mon, 07 Oct 2024 15:21:53 GMT; HttpOnly; Secure; SameSite=Lax
+Accept-Ranges: bytes
+Transfer-Encoding: chunked
+X-GitHub-Request-Id: FFD5:1CCD95:E871:108FD:65217791
+connection: close
+
+]
+[2023-10-07 20:51:53,236: ERROR: main: File is not a zip file]
+Traceback (most recent call last):
+  File "main.py", line 12, in <module>
+    data_ingestion.main()
+  File "c:\users\vision\onedrive\desktop\all_project\cnn_project\chicken-disease-classification-projects\src\cnnClassifier\pipeline\stage_01_data_ingestion.py", line 17, in main
+    data_ingestion.extract_zip_file()
+  File "c:\users\vision\onedrive\desktop\all_project\cnn_project\chicken-disease-classification-projects\src\cnnClassifier\components\data_ingestion.py", line 36, in extract_zip_file
+    with zipfile.ZipFile(self.config.local_data_file, 'r') as zip_ref:
+  File "C:\Users\Public\miniconda3\envs\cnn\lib\zipfile.py", line 1269, in __init__
+    self._RealGetContents()
+  File "C:\Users\Public\miniconda3\envs\cnn\lib\zipfile.py", line 1336, in _RealGetContents
+    raise BadZipFile("File is not a zip file")
+zipfile.BadZipFile: File is not a zip file
+[2023-10-07 20:52:32,058: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2023-10-07 20:52:32,064: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-10-07 20:52:32,068: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-10-07 20:52:32,071: INFO: common: created directory at: artifacts]
+[2023-10-07 20:52:32,079: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-10-07 20:52:33,577: INFO: data_ingestion: artifacts/data_ingestion/data.zip download! with following info: 
+Server: GitHub.com
+Date: Sat, 07 Oct 2023 15:22:34 GMT
+Content-Type: text/html; charset=utf-8
+Vary: X-PJAX, X-PJAX-Container, Turbo-Visit, Turbo-Frame, Accept-Encoding, Accept, X-Requested-With
+ETag: W/"dfc04342c1450763e57726c5aac61ad7"
+Cache-Control: max-age=0, private, must-revalidate
+Strict-Transport-Security: max-age=31536000; includeSubdomains; preload
+X-Frame-Options: deny
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Referrer-Policy: no-referrer-when-downgrade
+Content-Security-Policy: default-src 'none'; base-uri 'self'; child-src github.com/assets-cdn/worker/ gist.github.com/assets-cdn/worker/; connect-src 'self' uploads.github.com www.githubstatus.com collector.github.com raw.githubusercontent.com api.githubcopilot.com api.github.com github-cloud.s3.amazonaws.com github-production-repository-file-5c1aeb.s3.amazonaws.com github-production-upload-manifest-file-7fdce7.s3.amazonaws.com github-production-user-asset-6210df.s3.amazonaws.com cdn.optimizely.com logx.optimizely.com/v1/events objects-origin.githubusercontent.com *.actions.githubusercontent.com productionresultssa0.blob.core.windows.net/ productionresultssa1.blob.core.windows.net/ productionresultssa2.blob.core.windows.net/ productionresultssa3.blob.core.windows.net/ productionresultssa4.blob.core.windows.net/ productionresultssa5.blob.core.windows.net/ productionresultssa6.blob.core.windows.net/ productionresultssa7.blob.core.windows.net/ productionresultssa8.blob.core.windows.net/ productionresultssa9.blob.core.windows.net/ wss://*.actions.githubusercontent.com github-production-repository-image-32fea6.s3.amazonaws.com github-production-release-asset-2e65be.s3.amazonaws.com insights.github.com wss://alive.github.com; font-src github.githubassets.com; form-action 'self' github.com gist.github.com objects-origin.githubusercontent.com; frame-ancestors 'none'; frame-src viewscreen.githubusercontent.com notebooks.githubusercontent.com support.github.com; img-src 'self' data: github.githubassets.com media.githubusercontent.com camo.githubusercontent.com identicons.github.com avatars.githubusercontent.com github-cloud.s3.amazonaws.com objects.githubusercontent.com secured-user-images.githubusercontent.com/ user-images.githubusercontent.com/ private-user-images.githubusercontent.com opengraph.githubassets.com github-production-user-asset-6210df.s3.amazonaws.com customer-stories-feed.github.com spotlights-feed.github.com objects-origin.githubusercontent.com *.githubusercontent.com; manifest-src 'self'; media-src github.com user-images.githubusercontent.com/ secured-user-images.githubusercontent.com/ private-user-images.githubusercontent.com github-production-user-asset-6210df.s3.amazonaws.com; script-src github.githubassets.com; style-src 'unsafe-inline' github.githubassets.com; upgrade-insecure-requests; worker-src github.com/assets-cdn/worker/ gist.github.com/assets-cdn/worker/
+Set-Cookie: _gh_sess=ICFFyd14l1%2Fd0D%2F1bGgCI3tcgqKTSMP8maHskSLc6nqaOxdWoOwLEUydfSnkPAtCBB1l%2FoCy%2BlmNzSI6qsLsKyWWid9WNqSaCHRL6vhbVDPmGxBosJ5Fc%2FNM9peLsqAQ3B6VJC4EmnKoyc6yD43fvY7NYzWd0hbmFh1NUUKjZy5hmliX2X4uFcJxAipvckZRIJEj8LMk7xybBYl1Fk%2BOkp8rzjCF20Fj7qQ20bkreZQMBg68Ewtvh7VOkOLMkWOMbybMRlSKA0zfkG%2FbTm04FA%3D%3D--XmYPU2bqji7KHvn%2F--bHunDHarJgWP2Pr5ZgGy5Q%3D%3D; Path=/; HttpOnly; Secure; SameSite=Lax
+Set-Cookie: _octo=GH1.1.283162405.1696692153; Path=/; Domain=github.com; Expires=Mon, 07 Oct 2024 15:22:33 GMT; Secure; SameSite=Lax
+Set-Cookie: logged_in=no; Path=/; Domain=github.com; Expires=Mon, 07 Oct 2024 15:22:33 GMT; HttpOnly; Secure; SameSite=Lax
+Accept-Ranges: bytes
+Transfer-Encoding: chunked
+X-GitHub-Request-Id: FED3:1CE2CA:12032:1442E:652177B9
+connection: close
+
+]
+[2023-10-07 20:52:33,605: ERROR: main: File is not a zip file]
+Traceback (most recent call last):
+  File "main.py", line 12, in <module>
+    data_ingestion.main()
+  File "c:\users\vision\onedrive\desktop\all_project\cnn_project\chicken-disease-classification-projects\src\cnnClassifier\pipeline\stage_01_data_ingestion.py", line 17, in main
+    data_ingestion.extract_zip_file()
+  File "c:\users\vision\onedrive\desktop\all_project\cnn_project\chicken-disease-classification-projects\src\cnnClassifier\components\data_ingestion.py", line 36, in extract_zip_file
+    with zipfile.ZipFile(self.config.local_data_file, 'r') as zip_ref:
+  File "C:\Users\Public\miniconda3\envs\cnn\lib\zipfile.py", line 1269, in __init__
+    self._RealGetContents()
+  File "C:\Users\Public\miniconda3\envs\cnn\lib\zipfile.py", line 1336, in _RealGetContents
+    raise BadZipFile("File is not a zip file")
+zipfile.BadZipFile: File is not a zip file
+[2023-10-07 20:56:55,983: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2023-10-07 20:56:55,989: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-10-07 20:56:55,996: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-10-07 20:56:55,998: INFO: common: created directory at: artifacts]
+[2023-10-07 20:56:56,000: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-10-07 20:56:57,473: INFO: data_ingestion: artifacts/data_ingestion/data.zip download! with following info: 
+Server: GitHub.com
+Date: Sat, 07 Oct 2023 15:26:58 GMT
+Content-Type: text/html; charset=utf-8
+Vary: X-PJAX, X-PJAX-Container, Turbo-Visit, Turbo-Frame, Accept-Encoding, Accept, X-Requested-With
+ETag: W/"07f18e7382f43adf0285352dd881ef3c"
+Cache-Control: max-age=0, private, must-revalidate
+Strict-Transport-Security: max-age=31536000; includeSubdomains; preload
+X-Frame-Options: deny
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Referrer-Policy: no-referrer-when-downgrade
+Content-Security-Policy: default-src 'none'; base-uri 'self'; child-src github.com/assets-cdn/worker/ gist.github.com/assets-cdn/worker/; connect-src 'self' uploads.github.com www.githubstatus.com collector.github.com raw.githubusercontent.com api.githubcopilot.com api.github.com github-cloud.s3.amazonaws.com github-production-repository-file-5c1aeb.s3.amazonaws.com github-production-upload-manifest-file-7fdce7.s3.amazonaws.com github-production-user-asset-6210df.s3.amazonaws.com cdn.optimizely.com logx.optimizely.com/v1/events objects-origin.githubusercontent.com *.actions.githubusercontent.com productionresultssa0.blob.core.windows.net/ productionresultssa1.blob.core.windows.net/ productionresultssa2.blob.core.windows.net/ productionresultssa3.blob.core.windows.net/ productionresultssa4.blob.core.windows.net/ productionresultssa5.blob.core.windows.net/ productionresultssa6.blob.core.windows.net/ productionresultssa7.blob.core.windows.net/ productionresultssa8.blob.core.windows.net/ productionresultssa9.blob.core.windows.net/ wss://*.actions.githubusercontent.com github-production-repository-image-32fea6.s3.amazonaws.com github-production-release-asset-2e65be.s3.amazonaws.com insights.github.com wss://alive.github.com; font-src github.githubassets.com; form-action 'self' github.com gist.github.com objects-origin.githubusercontent.com; frame-ancestors 'none'; frame-src viewscreen.githubusercontent.com notebooks.githubusercontent.com support.github.com; img-src 'self' data: github.githubassets.com media.githubusercontent.com camo.githubusercontent.com identicons.github.com avatars.githubusercontent.com github-cloud.s3.amazonaws.com objects.githubusercontent.com secured-user-images.githubusercontent.com/ user-images.githubusercontent.com/ private-user-images.githubusercontent.com opengraph.githubassets.com github-production-user-asset-6210df.s3.amazonaws.com customer-stories-feed.github.com spotlights-feed.github.com objects-origin.githubusercontent.com *.githubusercontent.com; manifest-src 'self'; media-src github.com user-images.githubusercontent.com/ secured-user-images.githubusercontent.com/ private-user-images.githubusercontent.com github-production-user-asset-6210df.s3.amazonaws.com; script-src github.githubassets.com; style-src 'unsafe-inline' github.githubassets.com; upgrade-insecure-requests; worker-src github.com/assets-cdn/worker/ gist.github.com/assets-cdn/worker/
+Set-Cookie: _gh_sess=DFdlTovQjzmVmB6kUzuPjuyNkApzuVILuOGof5%2BEgyFn10%2FqsiGI0tsOCA%2F7GP0OQwIIjXkayi6N8wdtwScYw25TORZ12U4xTtLJsTtEFXcmVxaO%2FYnn0J%2BJFdlofZ1Ivbx6y8DTHYEuIeWDXO%2BfU2OzCM14vylRADLHeutY2Cg1o%2BEBES%2FEtHtxjFQImHD0v%2FNvYUegCeDOmeubmPOA6e1LpDaV0RobK3eAq8Pi3c5up1RZpuSptDiSJZ4sLYWYWd0z5jG3qoYMESpC326QjA%3D%3D--ZURV5ROLYg1RB%2B0%2B--8%2F82j%2FNaI0rhnBlEh9FWoQ%3D%3D; Path=/; HttpOnly; Secure; SameSite=Lax
+Set-Cookie: _octo=GH1.1.406784403.1696692417; Path=/; Domain=github.com; Expires=Mon, 07 Oct 2024 15:26:57 GMT; Secure; SameSite=Lax
+Set-Cookie: logged_in=no; Path=/; Domain=github.com; Expires=Mon, 07 Oct 2024 15:26:57 GMT; HttpOnly; Secure; SameSite=Lax
+Accept-Ranges: bytes
+Transfer-Encoding: chunked
+X-GitHub-Request-Id: FE65:1DA2CC:167B3:1983A:652178C1
+connection: close
+
+]
+[2023-10-07 20:56:57,518: ERROR: main: File is not a zip file]
+Traceback (most recent call last):
+  File "main.py", line 12, in <module>
+    data_ingestion.main()
+  File "c:\users\vision\onedrive\desktop\all_project\cnn_project\chicken-disease-classification-projects\src\cnnClassifier\pipeline\stage_01_data_ingestion.py", line 17, in main
+    data_ingestion.extract_zip_file()
+  File "c:\users\vision\onedrive\desktop\all_project\cnn_project\chicken-disease-classification-projects\src\cnnClassifier\components\data_ingestion.py", line 36, in extract_zip_file
+    with zipfile.ZipFile(self.config.local_data_file, 'r') as zip_ref:
+  File "C:\Users\Public\miniconda3\envs\cnn\lib\zipfile.py", line 1269, in __init__
+    self._RealGetContents()
+  File "C:\Users\Public\miniconda3\envs\cnn\lib\zipfile.py", line 1336, in _RealGetContents
+    raise BadZipFile("File is not a zip file")
+zipfile.BadZipFile: File is not a zip file
+[2023-10-07 20:58:37,459: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-10-07 20:58:37,471: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-10-07 20:58:37,476: INFO: common: created directory at: artifacts]
+[2023-10-07 20:58:37,482: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-10-07 20:58:39,352: INFO: 1170291011: artifacts/data_ingestion/data.zip download! with following info: 
+Server: GitHub.com
+Date: Sat, 07 Oct 2023 15:28:39 GMT
+Content-Type: text/html; charset=utf-8
+Vary: X-PJAX, X-PJAX-Container, Turbo-Visit, Turbo-Frame, Accept-Encoding, Accept, X-Requested-With
+ETag: W/"16baa3ca8bfcb3b691c94b5090c776d0"
+Cache-Control: max-age=0, private, must-revalidate
+Strict-Transport-Security: max-age=31536000; includeSubdomains; preload
+X-Frame-Options: deny
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Referrer-Policy: no-referrer-when-downgrade
+Content-Security-Policy: default-src 'none'; base-uri 'self'; child-src github.com/assets-cdn/worker/ gist.github.com/assets-cdn/worker/; connect-src 'self' uploads.github.com www.githubstatus.com collector.github.com raw.githubusercontent.com api.githubcopilot.com api.github.com github-cloud.s3.amazonaws.com github-production-repository-file-5c1aeb.s3.amazonaws.com github-production-upload-manifest-file-7fdce7.s3.amazonaws.com github-production-user-asset-6210df.s3.amazonaws.com cdn.optimizely.com logx.optimizely.com/v1/events objects-origin.githubusercontent.com *.actions.githubusercontent.com productionresultssa0.blob.core.windows.net/ productionresultssa1.blob.core.windows.net/ productionresultssa2.blob.core.windows.net/ productionresultssa3.blob.core.windows.net/ productionresultssa4.blob.core.windows.net/ productionresultssa5.blob.core.windows.net/ productionresultssa6.blob.core.windows.net/ productionresultssa7.blob.core.windows.net/ productionresultssa8.blob.core.windows.net/ productionresultssa9.blob.core.windows.net/ wss://*.actions.githubusercontent.com github-production-repository-image-32fea6.s3.amazonaws.com github-production-release-asset-2e65be.s3.amazonaws.com insights.github.com wss://alive.github.com; font-src github.githubassets.com; form-action 'self' github.com gist.github.com objects-origin.githubusercontent.com; frame-ancestors 'none'; frame-src viewscreen.githubusercontent.com notebooks.githubusercontent.com support.github.com; img-src 'self' data: github.githubassets.com media.githubusercontent.com camo.githubusercontent.com identicons.github.com avatars.githubusercontent.com github-cloud.s3.amazonaws.com objects.githubusercontent.com secured-user-images.githubusercontent.com/ user-images.githubusercontent.com/ private-user-images.githubusercontent.com opengraph.githubassets.com github-production-user-asset-6210df.s3.amazonaws.com customer-stories-feed.github.com spotlights-feed.github.com objects-origin.githubusercontent.com *.githubusercontent.com; manifest-src 'self'; media-src github.com user-images.githubusercontent.com/ secured-user-images.githubusercontent.com/ private-user-images.githubusercontent.com github-production-user-asset-6210df.s3.amazonaws.com; script-src github.githubassets.com; style-src 'unsafe-inline' github.githubassets.com; upgrade-insecure-requests; worker-src github.com/assets-cdn/worker/ gist.github.com/assets-cdn/worker/
+Set-Cookie: _gh_sess=nSNh8r5A0rdCn%2BF0OTvtg23Id2jyVDQ93gqOX6BgzObmSWljoaxoovBWcvj3%2B%2Fed4bSvzBzBPejeuev4oAc%2FFhgrAoyWiCd07nxDxpd5axxLyO8F7rTZ7NvJSX97yj%2BHS5y8MSlT3%2Bo1VYnZO4xsYq048x8Q6H0uDxuI9iXFX%2FfQKhKJ5F6CxV%2BQVtCklh50We5j%2BMLIGTQ%2BRSbCAY%2FITeZyedFuezwrQpF5QYwO8HhK6evavJInQZ7eywBCLhCGVTBU8zqYisij4H9WiNBN%2Bg%3D%3D--UkaClw1Lp6GN6wNj--zwcdJEleRJ79o54k5DmewQ%3D%3D; Path=/; HttpOnly; Secure; SameSite=Lax
+Set-Cookie: _octo=GH1.1.1212267382.1696692519; Path=/; Domain=github.com; Expires=Mon, 07 Oct 2024 15:28:39 GMT; Secure; SameSite=Lax
+Set-Cookie: logged_in=no; Path=/; Domain=github.com; Expires=Mon, 07 Oct 2024 15:28:39 GMT; HttpOnly; Secure; SameSite=Lax
+Accept-Ranges: bytes
+Transfer-Encoding: chunked
+X-GitHub-Request-Id: FED2:1D8D9C:190D6:1C5D8:65217927
+connection: close
+
+]
+[2023-10-07 20:59:28,958: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-10-07 20:59:28,966: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-10-07 20:59:28,972: INFO: common: created directory at: artifacts]
+[2023-10-07 20:59:28,977: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-10-07 20:59:28,981: INFO: 1170291011: File already exists of size: ~ 120 KB]
+[2023-10-07 21:04:24,463: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-10-07 21:04:24,477: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-10-07 21:04:24,486: INFO: common: created directory at: artifacts]
+[2023-10-07 21:04:24,492: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-10-07 21:04:24,497: INFO: 1170291011: File already exists of size: ~ 120 KB]
+[2023-10-07 21:09:28,139: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-10-07 21:09:28,152: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-10-07 21:09:28,157: INFO: common: created directory at: artifacts]
+[2023-10-07 21:09:28,161: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-10-07 21:23:56,582: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-10-07 21:23:56,593: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-10-07 21:23:56,601: INFO: common: created directory at: artifacts]
+[2023-10-07 21:23:56,605: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-10-07 21:23:58,295: INFO: 2644365429: artifacts/data_ingestion/data.zip download! with following info: 
+Server: GitHub.com
+Date: Sat, 07 Oct 2023 15:53:58 GMT
+Content-Type: text/html; charset=utf-8
+Vary: X-PJAX, X-PJAX-Container, Turbo-Visit, Turbo-Frame, Accept-Encoding, Accept, X-Requested-With
+ETag: W/"4d199b9e9cfe81c5931148e565eee966"
+Cache-Control: max-age=0, private, must-revalidate
+Strict-Transport-Security: max-age=31536000; includeSubdomains; preload
+X-Frame-Options: deny
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Referrer-Policy: no-referrer-when-downgrade
+Content-Security-Policy: default-src 'none'; base-uri 'self'; child-src github.com/assets-cdn/worker/ gist.github.com/assets-cdn/worker/; connect-src 'self' uploads.github.com www.githubstatus.com collector.github.com raw.githubusercontent.com api.githubcopilot.com api.github.com github-cloud.s3.amazonaws.com github-production-repository-file-5c1aeb.s3.amazonaws.com github-production-upload-manifest-file-7fdce7.s3.amazonaws.com github-production-user-asset-6210df.s3.amazonaws.com cdn.optimizely.com logx.optimizely.com/v1/events objects-origin.githubusercontent.com *.actions.githubusercontent.com productionresultssa0.blob.core.windows.net/ productionresultssa1.blob.core.windows.net/ productionresultssa2.blob.core.windows.net/ productionresultssa3.blob.core.windows.net/ productionresultssa4.blob.core.windows.net/ productionresultssa5.blob.core.windows.net/ productionresultssa6.blob.core.windows.net/ productionresultssa7.blob.core.windows.net/ productionresultssa8.blob.core.windows.net/ productionresultssa9.blob.core.windows.net/ wss://*.actions.githubusercontent.com github-production-repository-image-32fea6.s3.amazonaws.com github-production-release-asset-2e65be.s3.amazonaws.com insights.github.com wss://alive.github.com; font-src github.githubassets.com; form-action 'self' github.com gist.github.com objects-origin.githubusercontent.com; frame-ancestors 'none'; frame-src viewscreen.githubusercontent.com notebooks.githubusercontent.com support.github.com; img-src 'self' data: github.githubassets.com media.githubusercontent.com camo.githubusercontent.com identicons.github.com avatars.githubusercontent.com github-cloud.s3.amazonaws.com objects.githubusercontent.com secured-user-images.githubusercontent.com/ user-images.githubusercontent.com/ private-user-images.githubusercontent.com opengraph.githubassets.com github-production-user-asset-6210df.s3.amazonaws.com customer-stories-feed.github.com spotlights-feed.github.com objects-origin.githubusercontent.com *.githubusercontent.com; manifest-src 'self'; media-src github.com user-images.githubusercontent.com/ secured-user-images.githubusercontent.com/ private-user-images.githubusercontent.com github-production-user-asset-6210df.s3.amazonaws.com; script-src github.githubassets.com; style-src 'unsafe-inline' github.githubassets.com; upgrade-insecure-requests; worker-src github.com/assets-cdn/worker/ gist.github.com/assets-cdn/worker/
+Set-Cookie: _gh_sess=xRVtIq2wkJK5%2BdHiD5Kau7XtuTIie3w330jJl5m57llbdbXra7wMqgX2GpPWn%2FtYgy%2FeRQmNmNcCmIrG2unUSbndDQAoOyfY04QqcgYXOn8jYADxicTctDW%2FW6%2F9bCB2la%2Bp%2FpYyyLCOmMDzTHtCQeJ0EqAxqwHgSgIq6RT9WAiXmK2rTMWYdBUjjSmnNQbXxAZwsUYdDh9IQI4YXEGbYfw44ijvGunzDqsWDCJI5BnZ%2F%2Fu31%2F1u9VNkLq9vVpqd4nXZyeCdX7ALZaC8Nzf%2FjQ%3D%3D--aIUrz7YxxH1RJJbl--p0o%2BRSSvLlc6Pk0KvdIa2w%3D%3D; Path=/; HttpOnly; Secure; SameSite=Lax
+Set-Cookie: _octo=GH1.1.1858480125.1696694038; Path=/; Domain=github.com; Expires=Mon, 07 Oct 2024 15:53:58 GMT; Secure; SameSite=Lax
+Set-Cookie: logged_in=no; Path=/; Domain=github.com; Expires=Mon, 07 Oct 2024 15:53:58 GMT; HttpOnly; Secure; SameSite=Lax
+Accept-Ranges: bytes
+Transfer-Encoding: chunked
+X-GitHub-Request-Id: FEB8:1C1FE2:39360:410A3:65217F16
+connection: close
+
+]
+[2023-10-07 23:55:15,815: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-10-07 23:55:15,828: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-10-07 23:55:15,834: INFO: common: created directory at: artifacts]
+[2023-10-07 23:55:15,839: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-10-07 23:55:15,844: INFO: 1815491861: File already exists of size: ~ 120 KB]
+[2023-10-08 08:38:05,693: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-10-08 08:38:05,709: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-10-08 08:38:05,717: INFO: common: created directory at: artifacts]
+[2023-10-08 08:38:05,725: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-10-08 08:38:40,151: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-10-08 08:38:40,159: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-10-08 08:38:40,167: INFO: common: created directory at: artifacts]
+[2023-10-08 08:38:40,167: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-10-08 08:49:11,237: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-10-08 08:49:11,245: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-10-08 08:49:11,253: INFO: common: created directory at: artifacts]
+[2023-10-08 08:49:11,261: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-10-08 08:54:32,602: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-10-08 08:54:32,610: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-10-08 08:54:32,618: INFO: common: created directory at: artifacts]
+[2023-10-08 08:54:32,626: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-10-08 09:00:17,648: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-10-08 09:00:17,664: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-10-08 09:00:17,664: INFO: common: created directory at: artifacts]
+[2023-10-08 09:00:17,672: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-10-08 09:00:43,525: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-10-08 09:00:43,533: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-10-08 09:00:43,541: INFO: common: created directory at: artifacts]
+[2023-10-08 09:00:43,549: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-10-08 09:06:38,153: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-10-08 09:06:38,165: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-10-08 09:06:38,170: INFO: common: created directory at: artifacts]
+[2023-10-08 09:06:38,176: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-10-08 10:31:38,688: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-10-08 10:31:38,705: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-10-08 10:31:38,710: INFO: common: created directory at: artifacts]
+[2023-10-08 10:31:38,715: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-10-08 10:33:44,200: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-10-08 10:33:44,213: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-10-08 10:33:44,218: INFO: common: created directory at: artifacts]
+[2023-10-08 10:33:44,224: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-10-08 10:37:21,323: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-10-08 10:37:21,334: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-10-08 10:37:21,343: INFO: common: created directory at: artifacts]
+[2023-10-08 10:37:21,348: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-10-08 10:37:43,317: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-10-08 10:37:43,331: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-10-08 10:37:43,336: INFO: common: created directory at: artifacts]
+[2023-10-08 10:37:43,342: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-10-08 11:33:13,864: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-10-08 11:33:13,881: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-10-08 11:33:13,885: INFO: common: created directory at: artifacts]
+[2023-10-08 11:33:13,893: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-10-08 11:33:39,870: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-10-08 11:33:39,882: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-10-08 11:33:39,888: INFO: common: created directory at: artifacts]
+[2023-10-08 11:33:39,895: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-10-08 11:37:23,467: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-10-08 11:37:23,480: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-10-08 11:37:23,485: INFO: common: created directory at: artifacts]
+[2023-10-08 11:37:23,488: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-10-08 11:40:07,747: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2023-10-08 11:40:07,755: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-10-08 11:40:07,763: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-10-08 11:40:07,766: INFO: common: created directory at: artifacts]
+[2023-10-08 11:40:07,779: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-10-08 11:40:09,251: INFO: data_ingestion: artifacts/data_ingestion/data.zip download! with following info: 
+Server: GitHub.com
+Date: Sun, 08 Oct 2023 06:10:09 GMT
+Content-Type: text/html; charset=utf-8
+Vary: X-PJAX, X-PJAX-Container, Turbo-Visit, Turbo-Frame, Accept-Encoding, Accept, X-Requested-With
+ETag: W/"b87a3313efcf9e071e09c67c580b97f6"
+Cache-Control: max-age=0, private, must-revalidate
+Strict-Transport-Security: max-age=31536000; includeSubdomains; preload
+X-Frame-Options: deny
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Referrer-Policy: no-referrer-when-downgrade
+Content-Security-Policy: default-src 'none'; base-uri 'self'; child-src github.com/assets-cdn/worker/ gist.github.com/assets-cdn/worker/; connect-src 'self' uploads.github.com www.githubstatus.com collector.github.com raw.githubusercontent.com api.githubcopilot.com api.github.com github-cloud.s3.amazonaws.com github-production-repository-file-5c1aeb.s3.amazonaws.com github-production-upload-manifest-file-7fdce7.s3.amazonaws.com github-production-user-asset-6210df.s3.amazonaws.com cdn.optimizely.com logx.optimizely.com/v1/events objects-origin.githubusercontent.com *.actions.githubusercontent.com productionresultssa0.blob.core.windows.net/ productionresultssa1.blob.core.windows.net/ productionresultssa2.blob.core.windows.net/ productionresultssa3.blob.core.windows.net/ productionresultssa4.blob.core.windows.net/ productionresultssa5.blob.core.windows.net/ productionresultssa6.blob.core.windows.net/ productionresultssa7.blob.core.windows.net/ productionresultssa8.blob.core.windows.net/ productionresultssa9.blob.core.windows.net/ wss://*.actions.githubusercontent.com github-production-repository-image-32fea6.s3.amazonaws.com github-production-release-asset-2e65be.s3.amazonaws.com insights.github.com wss://alive.github.com; font-src github.githubassets.com; form-action 'self' github.com gist.github.com objects-origin.githubusercontent.com; frame-ancestors 'none'; frame-src viewscreen.githubusercontent.com notebooks.githubusercontent.com support.github.com; img-src 'self' data: github.githubassets.com media.githubusercontent.com camo.githubusercontent.com identicons.github.com avatars.githubusercontent.com github-cloud.s3.amazonaws.com objects.githubusercontent.com secured-user-images.githubusercontent.com/ user-images.githubusercontent.com/ private-user-images.githubusercontent.com opengraph.githubassets.com github-production-user-asset-6210df.s3.amazonaws.com customer-stories-feed.github.com spotlights-feed.github.com objects-origin.githubusercontent.com *.githubusercontent.com; manifest-src 'self'; media-src github.com user-images.githubusercontent.com/ secured-user-images.githubusercontent.com/ private-user-images.githubusercontent.com github-production-user-asset-6210df.s3.amazonaws.com; script-src github.githubassets.com; style-src 'unsafe-inline' github.githubassets.com; upgrade-insecure-requests; worker-src github.com/assets-cdn/worker/ gist.github.com/assets-cdn/worker/
+Set-Cookie: _gh_sess=39b4NyTGLgh8qKkwUNaVw2hR0sjAAjKzPg5mUbr%2F0GWM6bxB%2BqLPzdvwKUr0ux7A5FfxI%2FY1IQUteL370gWJ37hKLZw4kqw8vfbey%2Fq%2BZvedWxXk4N3sMy75nS%2Bet4G3qKSnBAenZuTJt0Gt6%2BSFUUU2fZA9PQ1g0EgqGysCoYmYSunfxh4Ft040iqeHYYyreTIpqEPoY9CSP2MfQWL%2FwfzOvvOTeHXLiBGaNdKZzrbKGUU7uCEd16sm%2Bo7lEsUAwxS9zh94jAANxeuHiF5Oyg%3D%3D--mLx%2F4H1kzLsk3xkF--SDmpi2SaIaMNs4bIiz11vA%3D%3D; Path=/; HttpOnly; Secure; SameSite=Lax
+Set-Cookie: _octo=GH1.1.1048211794.1696745408; Path=/; Domain=github.com; Expires=Tue, 08 Oct 2024 06:10:08 GMT; Secure; SameSite=Lax
+Set-Cookie: logged_in=no; Path=/; Domain=github.com; Expires=Tue, 08 Oct 2024 06:10:08 GMT; HttpOnly; Secure; SameSite=Lax
+Accept-Ranges: bytes
+Transfer-Encoding: chunked
+X-GitHub-Request-Id: FE0D:1D3C5B:2F53C3:39419E:652247C0
+connection: close
+
+]
+[2023-10-08 11:40:09,279: ERROR: main: File is not a zip file]
+Traceback (most recent call last):
+  File "main.py", line 12, in <module>
+    data_ingestion.main()
+  File "c:\users\vision\onedrive\desktop\all_project\cnn_project\chicken-disease-classification-projects\src\cnnClassifier\pipeline\stage_01_data_ingestion.py", line 17, in main
+    data_ingestion.extract_zip_file()
+  File "c:\users\vision\onedrive\desktop\all_project\cnn_project\chicken-disease-classification-projects\src\cnnClassifier\components\data_ingestion.py", line 36, in extract_zip_file
+    with zipfile.ZipFile(self.config.local_data_file, 'r') as zip_ref:
+  File "C:\Users\Public\miniconda3\envs\cnn\lib\zipfile.py", line 1269, in __init__
+    self._RealGetContents()
+  File "C:\Users\Public\miniconda3\envs\cnn\lib\zipfile.py", line 1336, in _RealGetContents
+    raise BadZipFile("File is not a zip file")
+zipfile.BadZipFile: File is not a zip file
+[2023-10-08 12:20:55,821: INFO: stage_01_data_ingestion: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2023-10-08 12:20:55,826: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-10-08 12:20:55,830: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-10-08 12:20:55,831: INFO: common: created directory at: artifacts]
+[2023-10-08 12:20:55,833: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-10-08 12:20:55,834: INFO: data_ingestion: File already exists of size: ~ 120 KB]
+[2023-10-08 12:20:55,838: ERROR: stage_01_data_ingestion: File is not a zip file]
+Traceback (most recent call last):
+  File "C:\Users\Vision\OneDrive\Desktop\All_Project\cnn_project\Chicken-Disease-Classification-Projects\src\cnnClassifier\pipeline\stage_01_data_ingestion.py", line 26, in <module>
+    obj.main()
+  File "C:\Users\Vision\OneDrive\Desktop\All_Project\cnn_project\Chicken-Disease-Classification-Projects\src\cnnClassifier\pipeline\stage_01_data_ingestion.py", line 17, in main
+    data_ingestion.extract_zip_file()
+  File "c:\users\vision\onedrive\desktop\all_project\cnn_project\chicken-disease-classification-projects\src\cnnClassifier\components\data_ingestion.py", line 36, in extract_zip_file
+    with zipfile.ZipFile(self.config.local_data_file, 'r') as zip_ref:
+  File "C:\Users\Public\miniconda3\envs\cnn\lib\zipfile.py", line 1269, in __init__
+    self._RealGetContents()
+  File "C:\Users\Public\miniconda3\envs\cnn\lib\zipfile.py", line 1336, in _RealGetContents
+    raise BadZipFile("File is not a zip file")
+zipfile.BadZipFile: File is not a zip file
+[2023-10-08 12:30:27,735: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2023-10-08 12:30:27,741: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-10-08 12:30:27,746: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-10-08 12:30:27,748: INFO: common: created directory at: artifacts]
+[2023-10-08 12:30:27,750: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-10-08 12:30:29,224: INFO: data_ingestion: artifacts/data_ingestion/data.zip download! with following info: 
+Server: GitHub.com
+Date: Sun, 08 Oct 2023 07:00:29 GMT
+Content-Type: text/html; charset=utf-8
+Vary: X-PJAX, X-PJAX-Container, Turbo-Visit, Turbo-Frame, Accept-Encoding, Accept, X-Requested-With
+ETag: W/"73f34276a01324f1dcb32a1f22355453"
+Cache-Control: max-age=0, private, must-revalidate
+Strict-Transport-Security: max-age=31536000; includeSubdomains; preload
+X-Frame-Options: deny
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Referrer-Policy: no-referrer-when-downgrade
+Content-Security-Policy: default-src 'none'; base-uri 'self'; child-src github.com/assets-cdn/worker/ gist.github.com/assets-cdn/worker/; connect-src 'self' uploads.github.com www.githubstatus.com collector.github.com raw.githubusercontent.com api.githubcopilot.com api.github.com github-cloud.s3.amazonaws.com github-production-repository-file-5c1aeb.s3.amazonaws.com github-production-upload-manifest-file-7fdce7.s3.amazonaws.com github-production-user-asset-6210df.s3.amazonaws.com cdn.optimizely.com logx.optimizely.com/v1/events objects-origin.githubusercontent.com *.actions.githubusercontent.com productionresultssa0.blob.core.windows.net/ productionresultssa1.blob.core.windows.net/ productionresultssa2.blob.core.windows.net/ productionresultssa3.blob.core.windows.net/ productionresultssa4.blob.core.windows.net/ productionresultssa5.blob.core.windows.net/ productionresultssa6.blob.core.windows.net/ productionresultssa7.blob.core.windows.net/ productionresultssa8.blob.core.windows.net/ productionresultssa9.blob.core.windows.net/ wss://*.actions.githubusercontent.com github-production-repository-image-32fea6.s3.amazonaws.com github-production-release-asset-2e65be.s3.amazonaws.com insights.github.com wss://alive.github.com; font-src github.githubassets.com; form-action 'self' github.com gist.github.com objects-origin.githubusercontent.com; frame-ancestors 'none'; frame-src viewscreen.githubusercontent.com notebooks.githubusercontent.com support.github.com; img-src 'self' data: github.githubassets.com media.githubusercontent.com camo.githubusercontent.com identicons.github.com avatars.githubusercontent.com github-cloud.s3.amazonaws.com objects.githubusercontent.com secured-user-images.githubusercontent.com/ user-images.githubusercontent.com/ private-user-images.githubusercontent.com opengraph.githubassets.com github-production-user-asset-6210df.s3.amazonaws.com customer-stories-feed.github.com spotlights-feed.github.com objects-origin.githubusercontent.com *.githubusercontent.com; manifest-src 'self'; media-src github.com user-images.githubusercontent.com/ secured-user-images.githubusercontent.com/ private-user-images.githubusercontent.com github-production-user-asset-6210df.s3.amazonaws.com; script-src github.githubassets.com; style-src 'unsafe-inline' github.githubassets.com; upgrade-insecure-requests; worker-src github.com/assets-cdn/worker/ gist.github.com/assets-cdn/worker/
+Set-Cookie: _gh_sess=cpa9G4zpY0cLaUjvZpz%2F9zxcSMb%2FkOy3bf%2Fef5Fsg9V%2B40UtnJOCVfYcXgnTRxxO%2BF4lOOtOKsUFZvvaENIw7%2BmKlJnVW1ZL2qPKqy%2Fqx%2FEA9xhrNaAN%2FlCxTe60QXcPijy36uvPoZRHAJ%2FWop4AaDdJTMjFF5nzTJ8i1pNN1tqDVJenz1ox6%2FAFD%2BLVWy3lv3WVRW922pmuYeDbtvwhmEP6VVLf7WN7SxQDmBChOeFxKZPDGNWHZ4E%2FArBs1OZL6Mg8JEQ1JyP60N99i16wnQ%3D%3D--CWjvx02m5QC%2FeckF--iskm5ltm1qls6Tr5tZH%2FbQ%3D%3D; Path=/; HttpOnly; Secure; SameSite=Lax
+Set-Cookie: _octo=GH1.1.65197230.1696748429; Path=/; Domain=github.com; Expires=Tue, 08 Oct 2024 07:00:29 GMT; Secure; SameSite=Lax
+Set-Cookie: logged_in=no; Path=/; Domain=github.com; Expires=Tue, 08 Oct 2024 07:00:29 GMT; HttpOnly; Secure; SameSite=Lax
+Accept-Ranges: bytes
+Transfer-Encoding: chunked
+X-GitHub-Request-Id: FE2F:1D5662:3390DC:3E177F:6522538D
+connection: close
+
+]
+[2023-10-08 12:30:29,261: ERROR: main: File is not a zip file]
+Traceback (most recent call last):
+  File "main.py", line 12, in <module>
+    data_ingestion.main()
+  File "c:\users\vision\onedrive\desktop\all_project\cnn_project\chicken-disease-classification-projects\src\cnnClassifier\pipeline\stage_01_data_ingestion.py", line 17, in main
+    data_ingestion.extract_zip_file()
+  File "c:\users\vision\onedrive\desktop\all_project\cnn_project\chicken-disease-classification-projects\src\cnnClassifier\components\data_ingestion.py", line 36, in extract_zip_file
+    with zipfile.ZipFile(self.config.local_data_file, 'r') as zip_ref:
+  File "C:\Users\Public\miniconda3\envs\cnn\lib\zipfile.py", line 1269, in __init__
+    self._RealGetContents()
+  File "C:\Users\Public\miniconda3\envs\cnn\lib\zipfile.py", line 1336, in _RealGetContents
+    raise BadZipFile("File is not a zip file")
+zipfile.BadZipFile: File is not a zip file
+[2023-10-08 17:59:04,421: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2023-10-08 17:59:04,428: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-10-08 17:59:04,474: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-10-08 17:59:04,484: INFO: common: created directory at: artifacts]
+[2023-10-08 17:59:04,502: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-10-08 17:59:04,511: INFO: data_ingestion: File already exists of size: ~ 120 KB]
+[2023-10-08 17:59:04,607: ERROR: main: File is not a zip file]
+Traceback (most recent call last):
+  File "main.py", line 12, in <module>
+    data_ingestion.main()
+  File "c:\users\vision\onedrive\desktop\all_project\cnn_project\chicken-disease-classification-projects\src\cnnClassifier\pipeline\stage_01_data_ingestion.py", line 17, in main
+    data_ingestion.extract_zip_file()
+  File "c:\users\vision\onedrive\desktop\all_project\cnn_project\chicken-disease-classification-projects\src\cnnClassifier\components\data_ingestion.py", line 36, in extract_zip_file
+    with zipfile.ZipFile(self.config.local_data_file, 'r') as zip_ref:
+  File "C:\Users\Public\miniconda3\envs\cnn\lib\zipfile.py", line 1269, in __init__
+    self._RealGetContents()
+  File "C:\Users\Public\miniconda3\envs\cnn\lib\zipfile.py", line 1336, in _RealGetContents
+    raise BadZipFile("File is not a zip file")
+zipfile.BadZipFile: File is not a zip file
+[2023-10-08 19:23:12,808: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-10-08 19:23:12,821: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-10-08 19:23:12,826: INFO: common: created directory at: artifacts]
+[2023-10-08 19:23:12,830: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-10-08 19:29:10,732: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-10-08 19:29:10,744: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-10-08 19:29:10,748: INFO: common: created directory at: artifacts]
+[2023-10-08 19:29:10,752: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-10-08 19:29:10,757: INFO: 986331348: Downloading data from https://drive.google.com/file/d/1vlhZ5c7abUKF8xXERIw6m9Te8fW7ohw3/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2023-10-08 19:29:41,546: INFO: 986331348: Downloaded data from https://drive.google.com/file/d/1vlhZ5c7abUKF8xXERIw6m9Te8fW7ohw3/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2023-10-08 19:58:53,643: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-10-08 19:58:53,657: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-10-08 19:58:53,665: INFO: common: created directory at: artifacts]
+[2023-10-08 19:58:53,670: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-10-08 19:58:53,678: INFO: 986331348: Downloading data from  https://drive.google.com/file/d/1tsrGL_x3Y1hTXlidqzvVtHNIXp9xYyqt/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2023-10-08 19:58:56,977: INFO: 986331348: Downloaded data from  https://drive.google.com/file/d/1tsrGL_x3Y1hTXlidqzvVtHNIXp9xYyqt/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2023-10-08 19:59:53,053: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-10-08 19:59:53,067: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-10-08 19:59:53,071: INFO: common: created directory at: artifacts]
+[2023-10-08 19:59:53,076: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-10-08 19:59:53,080: INFO: 986331348: Downloading data from https://drive.google.com/file/d/1tsrGL_x3Y1hTXlidqzvVtHNIXp9xYyqt/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2023-10-08 19:59:57,205: INFO: 986331348: Downloaded data from https://drive.google.com/file/d/1tsrGL_x3Y1hTXlidqzvVtHNIXp9xYyqt/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2023-10-08 20:05:43,780: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-10-08 20:05:43,797: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-10-08 20:05:43,801: INFO: common: created directory at: artifacts]
+[2023-10-08 20:05:43,805: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-10-08 20:05:43,809: INFO: 986331348: Downloading data from https://drive.google.com/file/d/1_HA8lkhNZegmxkLU357xQgxK1q3oN2ku/view?usp=drive_link into file artifacts/data_ingestion/data.zip]
+[2023-10-08 20:05:48,162: INFO: 986331348: Downloaded data from https://drive.google.com/file/d/1_HA8lkhNZegmxkLU357xQgxK1q3oN2ku/view?usp=drive_link into file artifacts/data_ingestion/data.zip]
+[2023-10-08 20:21:50,725: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-10-08 20:21:50,736: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-10-08 20:21:50,742: INFO: common: created directory at: artifacts]
+[2023-10-08 20:21:50,747: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-10-08 20:21:50,757: INFO: 986331348: Downloading data from https://drive.google.com/file/d/1vlhZ5c7abUKF8xXERIw6m9Te8fW7ohw3/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2023-10-08 20:22:09,728: INFO: 986331348: Downloaded data from https://drive.google.com/file/d/1vlhZ5c7abUKF8xXERIw6m9Te8fW7ohw3/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2023-10-08 20:24:13,378: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-10-08 20:24:13,390: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-10-08 20:24:13,395: INFO: common: created directory at: artifacts]
+[2023-10-08 20:24:13,400: INFO: common: created directory at: artifacts/prepare_base_model]
+[2023-10-08 20:24:14,883: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2023-10-08 20:25:19,143: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-10-08 20:25:19,155: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-10-08 20:25:19,161: INFO: common: created directory at: artifacts]
+[2023-10-08 20:25:19,167: INFO: common: created directory at: artifacts\training]
+[2023-10-08 20:31:12,000: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-10-08 20:31:12,011: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-10-08 20:31:12,017: INFO: common: created directory at: artifacts]
+[2023-10-08 20:31:12,022: INFO: common: created directory at: artifacts\training]
+[2023-10-08 20:43:09,811: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-10-08 20:43:09,822: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-10-08 20:43:09,827: INFO: common: created directory at: artifacts]
+[2023-10-08 20:46:32,219: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-10-08 20:46:32,232: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-10-08 20:46:32,236: INFO: common: created directory at: artifacts]
+[2023-10-08 20:48:58,658: INFO: common: json file saved at: scores.json]
+[2023-10-09 08:01:57,764: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2023-10-09 08:01:57,774: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-10-09 08:01:57,783: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-10-09 08:01:57,785: INFO: common: created directory at: artifacts]
+[2023-10-09 08:01:57,791: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-10-09 08:01:59,975: INFO: data_ingestion: artifacts/data_ingestion/data.zip download! with following info: 
+Content-Type: text/html; charset=utf-8
+X-Robots-Tag: noindex, nofollow, nosnippet
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: Mon, 01 Jan 1990 00:00:00 GMT
+Date: Mon, 09 Oct 2023 02:32:00 GMT
+P3P: CP="This is not a P3P policy! See g.co/p3phelp for more info."
+Content-Security-Policy: require-trusted-types-for 'script';report-uri https://csp.withgoogle.com/csp/docs-tt
+Referrer-Policy: origin
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-XSS-Protection: 1; mode=block
+Server: GSE
+Set-Cookie: NID=511=A9WNYBi5u6SQHhlwBUAaVM1ZvyAz5TnzJcB5CYUPsJIetRTus3fJifKzwOUuj-u2eolNpKKBWkYCyhun4V81LXTSk2v-bCGJH-MsKWDUmBo84_6qeyj3Fu8_Ks9l6RnF3rdmiFwVJkuK82vSXmTuW4GEsgu5nKxmNqlpNzru8ec; expires=Tue, 09-Apr-2024 02:32:00 GMT; path=/; domain=.google.com; HttpOnly
+Alt-Svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+Accept-Ranges: none
+Vary: Sec-Fetch-Dest, Sec-Fetch-Mode, Sec-Fetch-Site,Accept-Encoding
+Connection: close
+Transfer-Encoding: chunked
+
+]
+[2023-10-09 08:02:00,031: ERROR: main: File is not a zip file]
+Traceback (most recent call last):
+  File "main.py", line 12, in <module>
+    data_ingestion.main()
+  File "c:\users\vision\onedrive\desktop\all_project\cnn_project\chicken-disease-classification-projects\src\cnnClassifier\pipeline\stage_01_data_ingestion.py", line 17, in main
+    data_ingestion.extract_zip_file()
+  File "c:\users\vision\onedrive\desktop\all_project\cnn_project\chicken-disease-classification-projects\src\cnnClassifier\components\data_ingestion.py", line 36, in extract_zip_file
+    with zipfile.ZipFile(self.config.local_data_file, 'r') as zip_ref:
+  File "C:\Users\Public\miniconda3\envs\cnn\lib\zipfile.py", line 1269, in __init__
+    self._RealGetContents()
+  File "C:\Users\Public\miniconda3\envs\cnn\lib\zipfile.py", line 1336, in _RealGetContents
+    raise BadZipFile("File is not a zip file")
+zipfile.BadZipFile: File is not a zip file
+[2023-10-09 08:14:33,033: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2023-10-09 08:14:33,058: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-10-09 08:14:33,072: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-10-09 08:14:33,075: INFO: common: created directory at: artifacts]
+[2023-10-09 08:14:33,078: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-10-09 08:14:33,081: INFO: data_ingestion: File already exists of size: ~ 82 KB]
+[2023-10-09 08:14:33,084: ERROR: main: File is not a zip file]
+Traceback (most recent call last):
+  File "main.py", line 12, in <module>
+    data_ingestion.main()
+  File "c:\users\vision\onedrive\desktop\all_project\cnn_project\chicken-disease-classification-projects\src\cnnClassifier\pipeline\stage_01_data_ingestion.py", line 17, in main
+    data_ingestion.extract_zip_file()
+  File "c:\users\vision\onedrive\desktop\all_project\cnn_project\chicken-disease-classification-projects\src\cnnClassifier\components\data_ingestion.py", line 36, in extract_zip_file
+    with zipfile.ZipFile(self.config.local_data_file, 'r') as zip_ref:
+  File "C:\Users\Public\miniconda3\envs\cnn\lib\zipfile.py", line 1269, in __init__
+    self._RealGetContents()
+  File "C:\Users\Public\miniconda3\envs\cnn\lib\zipfile.py", line 1336, in _RealGetContents
+    raise BadZipFile("File is not a zip file")
+zipfile.BadZipFile: File is not a zip file
+[2023-10-09 09:14:02,562: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2023-10-09 09:14:02,569: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-10-09 09:14:02,575: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-10-09 09:14:02,577: INFO: common: created directory at: artifacts]
+[2023-10-09 09:14:02,580: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-10-09 09:14:02,585: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1vlhZ5c7abUKF8xXERIw6m9Te8fW7ohw3/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2023-10-09 09:14:15,560: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1vlhZ5c7abUKF8xXERIw6m9Te8fW7ohw3/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2023-10-09 09:14:30,352: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2023-10-09 09:14:30,358: INFO: main: *******************]
+[2023-10-09 09:14:30,359: INFO: main: >>>>>> stage Prepare base model started <<<<<<]
+[2023-10-09 09:14:30,371: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-10-09 09:14:30,380: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-10-09 09:14:30,382: INFO: common: created directory at: artifacts]
+[2023-10-09 09:14:30,384: INFO: common: created directory at: artifacts/prepare_base_model]
+[2023-10-09 09:14:33,869: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2023-10-09 09:14:35,958: INFO: main: >>>>>> stage Prepare base model completed <<<<<<
+
+x==========x]
+[2023-10-09 09:14:35,960: INFO: main: *******************]
+[2023-10-09 09:14:35,960: INFO: main: >>>>>> stage Training started <<<<<<]
+[2023-10-09 09:14:35,966: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-10-09 09:14:35,971: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-10-09 09:14:35,973: INFO: common: created directory at: artifacts]
+[2023-10-09 09:14:35,975: INFO: common: created directory at: artifacts\training]
+[2023-10-09 09:14:41,093: ERROR: main: [WinError 3] The system cannot find the path specified: 'artifacts\\data_ingestion\\Chicken-fecal-images']
+Traceback (most recent call last):
+  File "main.py", line 40, in <module>
+    model_trainer.main()
+  File "c:\users\vision\onedrive\desktop\all_project\cnn_project\chicken-disease-classification-projects\src\cnnClassifier\pipeline\stage_03_training.py", line 19, in main
+    training.train_valid_generator()
+  File "c:\users\vision\onedrive\desktop\all_project\cnn_project\chicken-disease-classification-projects\src\cnnClassifier\components\training.py", line 33, in train_valid_generator
+    self.valid_generator = valid_datagenerator.flow_from_directory(
+  File "C:\Users\Public\miniconda3\envs\cnn\lib\site-packages\keras\src\preprocessing\image.py", line 1648, in flow_from_directory
+    return DirectoryIterator(
+  File "C:\Users\Public\miniconda3\envs\cnn\lib\site-packages\keras\src\preprocessing\image.py", line 563, in __init__
+    for subdir in sorted(os.listdir(directory)):
+FileNotFoundError: [WinError 3] The system cannot find the path specified: 'artifacts\\data_ingestion\\Chicken-fecal-images'
+[2023-10-09 09:24:00,348: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2023-10-09 09:24:00,354: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-10-09 09:24:00,358: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-10-09 09:24:00,359: INFO: common: created directory at: artifacts]
+[2023-10-09 09:24:00,361: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-10-09 09:24:00,364: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1vlhZ5c7abUKF8xXERIw6m9Te8fW7ohw3/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2023-10-09 09:24:13,739: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1vlhZ5c7abUKF8xXERIw6m9Te8fW7ohw3/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2023-10-09 09:24:21,154: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2023-10-09 09:24:21,172: INFO: main: *******************]
+[2023-10-09 09:24:21,177: INFO: main: >>>>>> stage Prepare base model started <<<<<<]
+[2023-10-09 09:24:21,192: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-10-09 09:24:21,206: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-10-09 09:24:21,212: INFO: common: created directory at: artifacts]
+[2023-10-09 09:24:21,215: INFO: common: created directory at: artifacts/prepare_base_model]
+[2023-10-09 09:24:23,330: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2023-10-09 09:24:28,138: INFO: main: >>>>>> stage Prepare base model completed <<<<<<
+
+x==========x]
+[2023-10-09 09:24:28,140: INFO: main: *******************]
+[2023-10-09 09:24:28,140: INFO: main: >>>>>> stage Training started <<<<<<]
+[2023-10-09 09:24:28,150: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-10-09 09:24:28,161: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-10-09 09:24:28,165: INFO: common: created directory at: artifacts]
+[2023-10-09 09:24:28,169: INFO: common: created directory at: artifacts\training]
+[2023-10-09 09:31:08,166: INFO: main: >>>>>> stage Training completed <<<<<<
+
+x==========x]
+[2023-10-09 09:31:08,169: INFO: main: *******************]
+[2023-10-09 09:31:08,170: INFO: main: >>>>>> stage Evaluation stage started <<<<<<]
+[2023-10-09 09:31:08,187: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-10-09 09:31:08,209: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-10-09 09:31:08,213: INFO: common: created directory at: artifacts]
+[2023-10-09 09:31:09,730: ERROR: main: [WinError 3] The system cannot find the path specified: 'artifacts\\data_ingestion\\Chicken-fecal-images']
+Traceback (most recent call last):
+  File "main.py", line 56, in <module>
+    model_evalution.main()
+  File "c:\users\vision\onedrive\desktop\all_project\cnn_project\chicken-disease-classification-projects\src\cnnClassifier\pipeline\stage_04_evaluation.py", line 19, in main
+    evaluation.evaluation()
+  File "c:\users\vision\onedrive\desktop\all_project\cnn_project\chicken-disease-classification-projects\src\cnnClassifier\components\evaluation.py", line 45, in evaluation
+    self._valid_generator()
+  File "c:\users\vision\onedrive\desktop\all_project\cnn_project\chicken-disease-classification-projects\src\cnnClassifier\components\evaluation.py", line 30, in _valid_generator
+    self.valid_generator = valid_datagenerator.flow_from_directory(
+  File "C:\Users\Public\miniconda3\envs\cnn\lib\site-packages\keras\src\preprocessing\image.py", line 1648, in flow_from_directory
+    return DirectoryIterator(
+  File "C:\Users\Public\miniconda3\envs\cnn\lib\site-packages\keras\src\preprocessing\image.py", line 563, in __init__
+    for subdir in sorted(os.listdir(directory)):
+FileNotFoundError: [WinError 3] The system cannot find the path specified: 'artifacts\\data_ingestion\\Chicken-fecal-images'
+[2023-10-09 09:34:11,019: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2023-10-09 09:34:11,025: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-10-09 09:34:11,033: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-10-09 09:34:11,035: INFO: common: created directory at: artifacts]
+[2023-10-09 09:34:11,037: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-10-09 09:34:11,039: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1vlhZ5c7abUKF8xXERIw6m9Te8fW7ohw3/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2023-10-09 09:34:24,816: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1vlhZ5c7abUKF8xXERIw6m9Te8fW7ohw3/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2023-10-09 09:34:30,098: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2023-10-09 09:34:30,106: INFO: main: *******************]
+[2023-10-09 09:34:30,107: INFO: main: >>>>>> stage Prepare base model started <<<<<<]
+[2023-10-09 09:34:30,121: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-10-09 09:34:30,127: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-10-09 09:34:30,128: INFO: common: created directory at: artifacts]
+[2023-10-09 09:34:30,130: INFO: common: created directory at: artifacts/prepare_base_model]
+[2023-10-09 09:34:31,356: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2023-10-09 09:34:32,717: INFO: main: >>>>>> stage Prepare base model completed <<<<<<
+
+x==========x]
+[2023-10-09 09:34:32,724: INFO: main: *******************]
+[2023-10-09 09:34:32,724: INFO: main: >>>>>> stage Training started <<<<<<]
+[2023-10-09 09:34:32,730: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-10-09 09:34:32,739: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-10-09 09:34:32,741: INFO: common: created directory at: artifacts]
+[2023-10-09 09:34:32,745: INFO: common: created directory at: artifacts\training]
+[2023-10-09 09:41:01,502: INFO: main: >>>>>> stage Training completed <<<<<<
+
+x==========x]
+[2023-10-09 09:41:01,504: INFO: main: *******************]
+[2023-10-09 09:41:01,505: INFO: main: >>>>>> stage Evaluation stage started <<<<<<]
+[2023-10-09 09:41:01,514: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-10-09 09:41:01,523: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-10-09 09:41:01,525: INFO: common: created directory at: artifacts]
+[2023-10-09 09:41:01,526: ERROR: main: unsupported operand type(s) for /: 'str' and 'str']
+Traceback (most recent call last):
+  File "main.py", line 56, in <module>
+    model_evalution.main()
+  File "c:\users\vision\onedrive\desktop\all_project\cnn_project\chicken-disease-classification-projects\src\cnnClassifier\pipeline\stage_04_evaluation.py", line 17, in main
+    val_config = config.get_validation_config()
+  File "c:\users\vision\onedrive\desktop\all_project\cnn_project\chicken-disease-classification-projects\src\cnnClassifier\config\configuration.py", line 90, in get_validation_config
+    training_data=Path("artifacts/data_ingestion"/"kidney-ct-scan-image"),
+TypeError: unsupported operand type(s) for /: 'str' and 'str'
+[2023-10-09 09:59:47,876: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2023-10-09 09:59:47,883: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-10-09 09:59:47,887: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-10-09 09:59:47,888: INFO: common: created directory at: artifacts]
+[2023-10-09 09:59:47,889: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-10-09 09:59:47,890: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1vlhZ5c7abUKF8xXERIw6m9Te8fW7ohw3/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2023-10-09 09:59:59,873: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1vlhZ5c7abUKF8xXERIw6m9Te8fW7ohw3/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2023-10-09 10:00:05,005: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2023-10-09 10:00:05,008: INFO: main: *******************]
+[2023-10-09 10:00:05,009: INFO: main: >>>>>> stage Prepare base model started <<<<<<]
+[2023-10-09 10:00:05,017: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-10-09 10:00:05,021: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-10-09 10:00:05,022: INFO: common: created directory at: artifacts]
+[2023-10-09 10:00:05,023: INFO: common: created directory at: artifacts/prepare_base_model]
+[2023-10-09 10:00:06,509: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2023-10-09 10:00:07,474: INFO: main: >>>>>> stage Prepare base model completed <<<<<<
+
+x==========x]
+[2023-10-09 10:00:07,476: INFO: main: *******************]
+[2023-10-09 10:00:07,477: INFO: main: >>>>>> stage Training started <<<<<<]
+[2023-10-09 10:00:07,483: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-10-09 10:00:07,489: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-10-09 10:00:07,490: INFO: common: created directory at: artifacts]
+[2023-10-09 10:00:07,492: INFO: common: created directory at: artifacts\training]
+[2023-10-09 10:06:27,726: INFO: main: >>>>>> stage Training completed <<<<<<
+
+x==========x]
+[2023-10-09 10:06:27,728: INFO: main: *******************]
+[2023-10-09 10:06:27,729: INFO: main: >>>>>> stage Evaluation stage started <<<<<<]
+[2023-10-09 10:06:27,740: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-10-09 10:06:27,753: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-10-09 10:06:27,758: INFO: common: created directory at: artifacts]
+[2023-10-09 10:08:29,255: INFO: common: json file saved at: scores.json]
+[2023-10-09 10:08:29,258: INFO: main: >>>>>> stage Evaluation stage completed <<<<<<
+
+x==========x]
